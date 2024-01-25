@@ -1,6 +1,6 @@
 <?php include 'pages/header.php'; ?>
 <div class="container mx-auto mt-8 p-8 bg-white rounded shadow-lg">
-    <h1 class="text-4xl font-bold mb-4 text-center text-blue-900" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);">Hubungi <font class="text-red-500">Kami</font>
+    <h1 class="md:text-4xl text-lg font-bold mb-4 text-center text-blue-900" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);">Hubungi <font class="text-red-500">Kami</font>
     </h1>
 
     <!-- Formulir Kontak -->
@@ -30,22 +30,22 @@
             <img src="dist/img/hubungi.png" alt="Ilustrasi Hubungi Kami" class="w-3/4 h-auto hidden md:flex">
         </div>
         <div class="mt-4">
-            <p class="text-4xl font-sans font-bold sm1:text-base text-blue-900">Temukan Kami Di Media Sosial ! </p>
+            <p class="md:text-4xl font-sans font-bold text-lg text-blue-900">Temukan Kami Di Media Sosial ! </p>
 
             <!-- Facebook -->
-            <div class="flex items-center mt-2 text-2xl">
+            <div class="flex items-center mt-2 md:text-2xl text-base">
                 <i class="fab fa-facebook text-blue-500 mr-1"></i>
                 <a href="https://www.facebook.com/RUMAHSAKITAZZAHRA/?locale=id_ID" target="_blank" class="text-blue-500 hover:underline font-bold">Facebook</a>
             </div>
 
             <!-- Instagram -->
-            <div class="flex items-center mt-2 text-2xl">
+            <div class="flex items-center mt-2 md:text-2xl text-base">
                 <i class="fab fa-instagram text-pink-500 mr-1"></i>
                 <a href="https://www.instagram.com/rs.azzahraofficial/" target="_blank" class="text-pink-500 hover:underline font-bold">Instagram</a>
             </div>
 
             <!-- WhatsApp -->
-            <div class="flex items-center mt-2 text-2xl">
+            <div class="flex items-center mt-2 md:text-2xl text-base">
                 <i class="fab fa-whatsapp text-green-500 mr-1"></i>
                 <a href="https://wa.me/6282388797008" target="_blank" class="text-green-500 hover:underline font-bold">WhatsApp</a>
             </div>

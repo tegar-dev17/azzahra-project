@@ -232,9 +232,9 @@ include 'koneksi.php'; // Make sure to include your database connection file
     <section id="karir">
         <?php foreach ($karirData as $karir) : ?>
             <div class="w-full px-4 flex flex-wrap">
-                <div class="p-4 md:w-2/3 pt-5">
+                <div class="p-4 md:w-2/3 md:pt-5">
                     <div class="min-w-full max-w-md mx-auto bg-white rounded overflow-hidden">
-                        <div class="px-6 py-4">
+                        <div class="md:px-6 py-4">
                             <div class="font-bold md:text-2xl text-lg md:mb-5 hover:text-blue-800 mt-5">
                                 <?= $karir['nama_loker']; ?>
                             </div>
