@@ -113,6 +113,39 @@
             }
         }
     </style>
+    <style>
+        /* Add your existing styles here */
+
+        @media screen and (max-width: 414px) {
+            /* Styles for screens with a maximum width of 767px (typical mobile screens) */
+
+            #mobileMenu {
+                display: block;
+            }
+
+            .hidden.md\\:hidden {
+                display: none;
+            }
+
+            /* You might need to adjust the styling for smaller screens */
+            .bg-transparent.top-0.right-1.w-full.flex.items-center.z-10.mt-3 {
+                position: relative;
+                background-color: white;
+                /* Change the background color as needed */
+            }
+
+            .container {
+                padding: 5px;
+                /* Add padding to the container for better visibility */
+            }
+
+            .md\\:hidden.absolute.z-10.hidden.font-normal.bg-white.divide-y.divide-gray-100.rounded-lg.shadow.w-full {
+                position: relative;
+                background-color: white;
+                /* Change the background color as needed */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -122,9 +155,8 @@
     <nav class=" text-black p-4">
         <div class="container mx-auto flex items-center justify-between">
             <div class="flex items-center">
-                <button class="px-3 py-1 rounded-full bg-blue-900 hover:bg-green-700 text-white animate-pulse">Pendaftaran Online</button>
+                <button class="px-4 py-1 rounded-full bg-blue-900 hover:bg-green-700 text-white animate-pulse">Daftar</button>
             </div>
-
             <div class="flex items-center ml-4 space-x-4"> <!-- Added ml-4 to create space between the two sets of menu items -->
                 <ul class="space-x-4 flex items-center"> <!-- Added flex and items-center to make menu items inline -->
                     <li><a href="#" class="hover:text-gray-300"><i class="fab fa-facebook"></i></a></li>
@@ -132,13 +164,13 @@
                     <li><a href="#" class="hover:text-gray-300"><i class="fab fa-whatsapp"></i></i></a></li>
                 </ul>
 
-                <button class="py-1 rounded-full bg-red-600 hover:bg-green-700 text-white px-6 animate-bounce">Ambulans</button>
+                <button class="py-1 rounded-full bg-red-600 hover:bg-green-700 text-white md:px-6 px-2 animate-bounce">Ambulans</button>
             </div>
         </div>
     </nav>
 
     <!-- Header Start -->
-    <header class="bg-transparent top-0 right-1 w-full flex items-center z-10 mt-10">
+    <header class="bg-transparent top-0 right-1 w-full flex items-center z-10">
         <div class="container">
             <div class="flex items-center justify-between px-4 py-2 bg-transparent text-black">
                 <div class="hidden md:flex items-center">
@@ -155,31 +187,32 @@
                                 </svg>
                             </button>
                             <!-- Dropdown menu -->
-                            <div id="dropdownNavbar" class="absolute z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                            <div id="dropdownNavbar" class="absolute z-10 hidden font-normal bg-blue-900 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                                     <li>
-                                        <a href="igd.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Instalasi Gawat Darurat</a>
+                                        <a href="igd.php" class="block px-4 py-2 hover:bg-red-500 dark:hover:bg-gray-600 text-white dark:hover:text-white">IGD</a>
                                     </li>
                                     <li>
-                                        <a href="poliklinik.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Poli Klinik</a>
+                                        <a href="poliklinik.php" class="block px-4 py-2 hover:bg-red-500 dark:hover:bg-gray-600 text-white dark:hover:text-white">Poli Klinik</a>
                                     </li>
                                     <li>
-                                        <a href="rawatinap.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Rawat Inap</a>
+                                        <a href="rawatinap.php" class="block px-4 py-2 hover:bg-red-500 dark:hover:bg-gray-600 text-white dark:hover:text-white">Rawat Inap</a>
                                     </li>
                                     <li>
-                                        <a href="instalasi_penunjang.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Fasilitas</a>
+                                        <a href="instalasi_penunjang.php" class="block px-4 py-2 hover:bg-red-500 dark:hover:bg-gray-600 text-white dark:hover:text-white">Fasilitas</a>
                                     </li>
+                                </ul>
                             </div>
                         </div>
                         <a href="dokter.php" class="hover:text-green-800">Dokter</a>
-                        <a href="homeberita.php" class="hover:text-green-800">Berita</a>
-                        <a href="hubungikami.php" class="hover:text-green-800">Hubungi Kami</a>
-                        <a href="karir.php" class="hover:text-green-800">Karir</a>
+                        <a href="homeberita.php" class="hover:text-green-800 hidden md:flex">Berita</a>
+                        <a href="hubungikami.php" class="hover:text-green-800 hidden md:flex">Hubungi Kami</a>
+                        <a href="karir.php" class="hover:text-green-800 hidden md:flex">Karir</a>
                     </div>
                 </div>
 
-                <div id="mobileMenu" class="md:hidden absolute z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-full">
-                    <div class="flex items-center justify-between px-4 py-2 bg-transparent text-black">
+                <div id="mobileMenu" class="md:hidden absolute z-10 hidden font-normal bg-white divide-y divide-gray-100">
+                    <div class="flex items-center justify-between py-2 bg-transparent text-black">
                         <div class="hidden md:flex items-center">
                             <img src="dist/img/icon.png" class="h-8" alt="">
                             <p class="font-semibold ml-2 text-xs text-black">Azzahra</p>
@@ -205,28 +238,17 @@
                                         <a href="rawatinap.php" class="block px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Rawat Inap</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="block px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Fasilitas</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Ruang Khusus</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Penunjang</a>
+                                        <a href="instalasi_penunjang.php" class="block px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Fasilitas</a>
                                     </li>
                                 </ul>
-                                <div class="py-1">
-                                    <a href="#" class="block px-3 py-1 text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
-                                </div>
                             </div>
-                            <a href="dokter.php" class="hover:text-green-800">Jadwal Dokter</a>
+                            <a href="dokter.php" class="hover:text-green-800">Dokter</a>
                             <a href="homeberita.php" class="hover:text-green-800">Berita</a>
-                            <a href="#" class="hover:text-green-800">Hubungi Kami</a>
+                            <a href="hubungikami.php" class="hover:text-green-800">Hubungi</a>
                             <a href="karir.php" class="hover:text-green-800">Karir</a>
                         </div>
                     </div>
                 </div>
-
-
             </div>
     </header>
     <section id="portfolio" class="bg-white">
@@ -234,11 +256,11 @@
             <div class="w-full px-4 flex flex-wrap" id="header1">
                 <div class="p-4 md:w-1/2 md:pt-10">
                     <br>
-                    <h4 class="font-semibold md:text-lg text-xs text-blue-900 mb-2">Rumah Sakit Azzahra Ujungbatu</h4>
-                    <h2 class="font-bold text-blue-900 md:text-3xl mb-4 sm:text-4xl lg:text-5xl" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                    <h4 class="font-semibold md:text-lg text-sm text-blue-900 md:mb-2">Rumah Sakit Azzahra Ujungbatu</h4>
+                    <h2 class="font-bold text-lg text-blue-900 md:text-3xl mb-4 sm:text-4xl lg:text-5xl" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
                         Rawat <font class="text-red-500">Inap</font>
                     </h2>
-                    <p class="font-light md:text-lg text-xs text-slate-600 font-extralight text-justify">
+                    <p class="md:text-lg text-sm text-slate-600 font-extralight text-justify">
                         Seluruh fasilitas kamar inap selalu dinilai kelayakannya mengikuti patient safety indicator.
                         Kami memiliki berbagai pilihan kamar untuk menyesuaikan kebutuhan Anda.
                         Apapun pilihannya, kami akan senantiasa memberikan pelayanan terbaik.
@@ -283,7 +305,7 @@
                     <form method="POST" id="searchForm">
                         <label for="type_kamar" class="font-bold text-blue-900 text-base sm:text-4xl lg:text-3xl" style="text-shadow: 2px 2px 4px rgba(59, 130, 246, 0.5);">Jenis <font class="text-primary">Kamar</font></label>
                         <br>
-                        <select class="md:mt-2 md:px-4 md:py-2 border-2 w-1/2 mt-3 rounded-md border-blue-900 w-full md:w-2/3 lg:w-1/2 form-control" id="type_kamar" name="type_kamar" onchange="this.form.submit()">
+                        <select class="md:mt-2 md:px-4 md:py-2 border-2  mt-3 rounded-md border-blue-900 w-4/5 md:w-2/3 lg:w-1/2 form-control" id="type_kamar" name="type_kamar" onchange="this.form.submit()">
                             <?php
                             $jenisKamarOptions = array("VVIP", "VIP", "KELAS 1", "KELAS 2", "KELAS 3");
                             foreach ($jenisKamarOptions as $option) {
@@ -347,15 +369,15 @@
 
             <div class="w-full px-4 flex flex-wrap justify-center" id="berita">
                 <div class="bg-white rounded shadow-lg min-w-full max-w-md mx-auto">
-                    <h3 class="font-semibold text-5xl mt-10 mb-3 text-blue-900 px-4 text-center" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Fasilitas</h3>
+                    <h3 class="font-semibold md:text-5xl text-3xl mt-10 mb-3 text-blue-900 px-4 text-center" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Fasilitas</h3>
                     <div class="mb-12 p-10 flex flex-col items-center">
-                        <div class="flex flex-col md:flex-row items-center justify-center">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-center">
                             <div class="md:w-1/2 mb-4 md:mb-0">
                                 <div class="image-container flex items-center justify-center shadow-md overflow-hidden">
                                     <img src="<?= $ranap['foto']; ?>" alt="" class="w-full h-auto object-cover" />
                                 </div>
                             </div>
-                            <div class="md:w-1/2 ml-20">
+                            <div class="md:w-1/2 w-2/3 md:ml-20">
                                 <ul class="font-light text-lg text-slate-600">
                                     <?= $ranap['deskripsi']; ?>
                                 </ul>

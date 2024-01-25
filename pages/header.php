@@ -269,7 +269,7 @@ mysqli_close($conn);
         /* Add your existing styles here */
 
         @media screen and (max-width: 414px) {
-            /* Styles for screens with a maximum width of 767px (typical mobile screens) */
+            /* Styles for screens with a maximum width of 414px (typical mobile screens) */
 
             #mobileMenu {
                 display: block;
@@ -279,8 +279,8 @@ mysqli_close($conn);
                 display: none;
             }
 
-            /* You might need to adjust the styling for smaller screens */
-            .bg-transparent.top-0.right-1.w-full.flex.items-center.z-10.mt-3 {
+            /* Center the navigation and adjust spacing */
+            .bg-transparent.top-0.right-1.w-full.flex.items-center.justify-center.z-10.mt-3 {
                 position: relative;
                 background-color: white;
                 /* Change the background color as needed */
@@ -291,39 +291,46 @@ mysqli_close($conn);
                 /* Add padding to the container for better visibility */
             }
 
+            /* Center and space the navigation items */
             .md\\:hidden.absolute.z-10.hidden.font-normal.bg-white.divide-y.divide-gray-100.rounded-lg.shadow.w-full {
                 position: relative;
                 background-color: white;
                 /* Change the background color as needed */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                /* Adjust the gap between navigation items */
             }
         }
     </style>
-    <style>
-        /* Additional custom styles go here */
+</head>
+<style>
+    /* Additional custom styles go here */
 
-        /* Override specific styles for mobile */
-        @media screen and (max-width: 414px) {
-            #header1 {
-                flex-direction: column-reverse;
-            }
-
-            #header2 {
-                margin-right: 0;
-                margin-top: 0;
-            }
-
-            .px-52 {
-                padding-left: 2rem;
-                padding-right: 2rem;
-            }
-
-            #mapContainer {
-                width: 400px;
-                height: 400px;
-                /* Adjust the height as needed */
-            }
+    /* Override specific styles for mobile */
+    @media screen and (max-width: 414px) {
+        #header1 {
+            flex-direction: column-reverse;
         }
-    </style>
+
+        #header2 {
+            margin-right: 0;
+            margin-top: 0;
+        }
+
+        .px-52 {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        #mapContainer {
+            width: 400px;
+            height: 400px;
+            /* Adjust the height as needed */
+        }
+    }
+</style>
 </head>
 
 <body>

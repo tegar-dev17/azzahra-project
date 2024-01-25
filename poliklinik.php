@@ -3,7 +3,7 @@
 <body>
     <div class="bg-cover sm:w-auto">
         <br><br>
-        <section id="Poli" class="pt-10 pb-16 ">
+        <section id="Poli" class="md:pt-10 pb-16 ">
             <div class="w-full px-1">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h1 class="font-poli font-bold text-blue-900 text-4xl mb-5">Layanan <font class="text-red-500">Poli</font>
