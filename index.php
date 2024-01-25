@@ -248,7 +248,7 @@
                                         <img class="w-64 h-36 object-cover transform transition-transform duration-300 hover:scale-95" src="<?= $berita['photo']; ?>" alt="<?= $berita['judul']; ?>">
                                     </div>
                                     <div class="p-4">
-                                        <p class="text-gray-700 font-poli text-sm mb-2"><?= $berita['tanggal']; ?></p>
+                                        <p class="text-gray-700 font-poli text-sm mb-2"><?= date('Y-m-d H:i', strtotime($berita['tanggal'])); ?></p>
                                         <h3 class="font-semibold text-base mb-2 w-54 text-blue-900"><?= $berita['judul']; ?></h3>
                                         <p class="text-gray-700 w-54 h-16 overflow-hidden text-overflow-ellipsis font-light text-sm"><?= $berita['headline']; ?></p>
                                     </div>

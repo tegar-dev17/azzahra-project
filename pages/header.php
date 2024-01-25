@@ -427,7 +427,5 @@ mysqli_close($conn);
                         </div>
                     </div>
                 </div>
-
-
             </div>
     </header>

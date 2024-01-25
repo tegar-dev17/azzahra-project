@@ -68,6 +68,39 @@ include 'koneksi.php';
             /* Hide overflowing text */
         }
     </style>
+    <style>
+        /* Add your existing styles here */
+
+        @media screen and (max-width: 414px) {
+            /* Styles for screens with a maximum width of 767px (typical mobile screens) */
+
+            #mobileMenu {
+                display: block;
+            }
+
+            .hidden.md\\:hidden {
+                display: none;
+            }
+
+            /* You might need to adjust the styling for smaller screens */
+            .bg-transparent.top-0.right-1.w-full.flex.items-center.z-10.mt-3 {
+                position: relative;
+                background-color: white;
+                /* Change the background color as needed */
+            }
+
+            .container {
+                padding: 5px;
+                /* Add padding to the container for better visibility */
+            }
+
+            .md\\:hidden.absolute.z-10.hidden.font-normal.bg-white.divide-y.divide-gray-100.rounded-lg.shadow.w-full {
+                position: relative;
+                background-color: white;
+                /* Change the background color as needed */
+            }
+        }
+    </style>
     <script>
         // Fungsi untuk menangkap total klik
         function tambahkanKlik(idBerita) {
@@ -92,16 +125,15 @@ include 'koneksi.php';
     </script>
 </head>
 
-<body style="background-image: url('dist/img/hd10.png'); background-size: contain; background-repeat: no-repeat;">
+<body>
     <div id="loading-screen">
         <div class="loader"></div>
     </div>
     <nav class=" text-black p-4">
         <div class="container mx-auto flex items-center justify-between">
             <div class="flex items-center">
-                <button class="px-3 py-1 rounded-full bg-blue-900 hover:bg-green-700 text-white animate-pulse">Pendaftaran Online</button>
+                <button class="px-4 py-1 rounded-full bg-blue-900 hover:bg-green-700 text-white animate-pulse">Daftar</button>
             </div>
-
             <div class="flex items-center ml-4 space-x-4"> <!-- Added ml-4 to create space between the two sets of menu items -->
                 <ul class="space-x-4 flex items-center"> <!-- Added flex and items-center to make menu items inline -->
                     <li><a href="#" class="hover:text-gray-300"><i class="fab fa-facebook"></i></a></li>
@@ -109,61 +141,92 @@ include 'koneksi.php';
                     <li><a href="#" class="hover:text-gray-300"><i class="fab fa-whatsapp"></i></i></a></li>
                 </ul>
 
-                <button class="py-1 rounded-full bg-red-600 hover:bg-green-700 text-white px-6 animate-bounce">Ambulans</button>
+                <button class="py-1 rounded-full bg-red-600 hover:bg-green-700 text-white md:px-6 px-2 animate-bounce">Ambulans</button>
             </div>
         </div>
     </nav>
 
     <!-- Header Start -->
-    <header class="bg-transparent top-0 right-1 w-full flex items-center z-10 mt-10">
+    <header class="bg-transparent top-0 right-1 w-full flex items-center z-10">
         <div class="container">
             <div class="flex items-center justify-between px-4 py-2 bg-transparent text-black">
-                <div class="flex items-center">
+                <div class="hidden md:flex items-center">
                     <img src="dist/img/icon.png" class="h-8" alt="">
-                    <p class="font-semibold ml-2 text-sm text-primary">Azzahra</p>
+                    <p class="font-semibold ml-2 text-sm text-black">Azzahra</p>
                 </div>
-
-                <div class="flex items-center md:hidden">
-                    <button id="navbar-toggle" data-collapse-toggle="navbar-dropdown" type="button" class="text-gray-500 hover:text-white focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.php" class="hover:text-green-800">Tentang</a>
-
-
-                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4  text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-800 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Layanan
-                        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
-                        </svg>
-                    </button>
-                    <!-- Dropdown menu -->
-                    <div id="dropdownNavbar" class="absolute z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                            <li>
-                                <a href="igd.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Instalasi Gawat Darurat</a>
-                            </li>
-                            <li>
-                                <a href="poliklinik.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Poli Klinik</a>
-                            </li>
-                            <li>
-                                <a href="rawatinap.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Rawat Inap</a>
-                            </li>
-                            <li>
-                                <a href="instalasi_penunjang.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Fasilitas</a>
-                            </li>
-                        </ul>
+                <div class="flex items-center justify-between px-4 py-2 bg-transparent text-black">
+                    <div class="flex space-x-8 text-sm text-center">
+                        <a href="index.php" class="hover:text-green-800">Tentang</a>
+                        <div class="relative group">
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4  text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-800 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Layanan
+                                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbar" class="absolute z-10 hidden font-normal bg-blue-900 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="igd.php" class="block px-4 py-2 hover:bg-red-500 dark:hover:bg-gray-600 text-white dark:hover:text-white">IGD</a>
+                                    </li>
+                                    <li>
+                                        <a href="poliklinik.php" class="block px-4 py-2 hover:bg-red-500 dark:hover:bg-gray-600 text-white dark:hover:text-white">Poli Klinik</a>
+                                    </li>
+                                    <li>
+                                        <a href="rawatinap.php" class="block px-4 py-2 hover:bg-red-500 dark:hover:bg-gray-600 text-white dark:hover:text-white">Rawat Inap</a>
+                                    </li>
+                                    <li>
+                                        <a href="instalasi_penunjang.php" class="block px-4 py-2 hover:bg-red-500 dark:hover:bg-gray-600 text-white dark:hover:text-white">Fasilitas</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="dokter.php" class="hover:text-green-800">Dokter</a>
+                        <a href="homeberita.php" class="hover:text-green-800 hidden md:flex">Berita</a>
+                        <a href="hubungikami.php" class="hover:text-green-800 hidden md:flex">Hubungi Kami</a>
+                        <a href="karir.php" class="hover:text-green-800 hidden md:flex">Karir</a>
                     </div>
-                    <a href="dokter.php" class="hover:text-green-800">Dokter</a>
-                    <a href="homeberita.php" class="hover:text-green-800">Berita</a>
-                    <a href="hubungikami.php" class="hover:text-green-800">Hubungi Kami</a>
-                    <a href="karir.php" class="hover:text-green-800">Karir</a>
+                </div>
+
+                <div id="mobileMenu" class="md:hidden absolute z-10 hidden font-normal bg-white divide-y divide-gray-100">
+                    <div class="flex items-center justify-between py-2 bg-transparent text-black">
+                        <div class="hidden md:flex items-center">
+                            <img src="dist/img/icon.png" class="h-8" alt="">
+                            <p class="font-semibold ml-2 text-xs text-black">Azzahra</p>
+                        </div>
+                        <div class="space-x-2 text-xs flex items-center">
+                            <a href="index.php" class="hover:text-green-800">Tentang</a>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between py-2 pl-2 pr-3 text-sm text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-green-800 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                                Layanan
+                                <svg class="w-2 h-2 ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbar" class="absolute z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 dark:divide-gray-600">
+                                <ul class="py-2 text-xs text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="igd.php" class="block px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">IGD</a>
+                                    </li>
+                                    <li>
+                                        <a href="poliklinik.php" class="block px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Poli Klinik</a>
+                                    </li>
+                                    <li>
+                                        <a href="rawatinap.php" class="block px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Rawat Inap</a>
+                                    </li>
+                                    <li>
+                                        <a href="instalasi_penunjang.php" class="block px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Fasilitas</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="dokter.php" class="hover:text-green-800">Dokter</a>
+                            <a href="homeberita.php" class="hover:text-green-800">Berita</a>
+                            <a href="hubungikami.php" class="hover:text-green-800">Hubungi</a>
+                            <a href="karir.php" class="hover:text-green-800">Karir</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
     </header>
     <?php
     // Assuming you have a valid database connection in $conn
@@ -196,7 +259,7 @@ include 'koneksi.php';
     <div class="container mx-auto px-4 flex flex-wrap justify-center pt-10">
         <aside class="w-full md:w-1/4 p-4">
             <div class="mb-4 p-4">
-                <h2 class="font-bold text-blue-900 md:text-3xl text-base mb-4 sm:text-4xl lg:text-2xl">
+                <h2 class="font-bold text-blue-900 md:text-3xl text-xl md:text-left text-center mb-4 sm:text-4xl lg:text-2xl">
                     <span>Berita <font class="text-yellow-500">Terbaru</font></span>
                     <br>
                 </h2>
@@ -236,15 +299,15 @@ include 'koneksi.php';
         <div class="w-full md:w-3/4 p-4">
             <div class="w-full px-4 flex flex-wrap justify-center" id="berita">
                 <div class="bg-white min-w-full md:w-1/2">
-                    <div class="mb-12 p-10 border-b">
+                    <div class="md:mb-12 p-10 border-b">
                         <div class="image-container">
                             <img src="<?= $berita['photo']; ?>" alt="" class="w-full h-full object-cover" />
                         </div>
                         <br>
-                        <div class="flex items-center justify-between mb-5">
+                        <div class="flex items-center justify-between md:mb-5">
                             <div>
                                 <i class="fas fa-calendar text-blue-900 md:text-base text-xs"></i>
-                                <font class="ml-1 text-gray-600 md:text-base text-xs"><?= $berita['tanggal']; ?></font>
+                                <font class="ml-1 text-gray-600 md:text-base text-xs"><?= date('Y-m-d H:i', strtotime($berita['tanggal'])); ?></font>
                                 <i class="fas fa-user ml-2 text-blue-900 md:text-base text-xs"></i>
                                 <font class="md:text-base text-xs text-gray-600"><?= $berita['admin_username']; ?></font>
                             </div>
@@ -253,9 +316,9 @@ include 'koneksi.php';
                                 <?= $berita['jumlah_klik']; ?>
                             </p>
                         </div>
-                        <h3 class="font-semibold text-3xl text-blue-900 text-start "><?= $berita['judul']; ?></h3>
+                        <h3 class="font-semibold md:text-3xl text-lg text-blue-900 text-start "><?= $berita['judul']; ?></h3>
                         <br>
-                        <p class="font-light text-lg text-slate-600">
+                        <p class="font-light md:text-base text-sm text-slate-600">
                             <?= $berita['isi']; ?>
                         </p>
                     </div>
@@ -291,7 +354,7 @@ include 'koneksi.php';
                     <div class="md:w-4/5 flex flex-wrap" id="header1">
                         <div class="p-4 md:w-1/2">
                             <br>
-                            <h2 class="font-bold text-blue-900 text-3xl sm:text-4xl lg:text-2xl">
+                            <h2 class="font-bold text-blue-900 md:text-3xl text-xl md:text-left text-center mb-4 sm:text-4xl lg:text-2xl">
                                 <span>Berita <font class="text-yellow-500">Terpopuler</font></span>
                                 <br>
                             </h2>
@@ -301,12 +364,12 @@ include 'koneksi.php';
                     <div class="w-full flex flex-wrap justify-center mb-10 overflow-x-auto">
                         <div class="flex space-x-6">
                             <?php foreach ($asideData as $data) : ?>
-                                <div class="w-52 max-w-xs h-96 rounded-3xl overflow-hidden shadow-2xl bg-white transform transition-transform duration-300 hover:scale-105" style="box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);" onclick="tampilkanBerita('<?= $berita['id_berita']; ?>')">
+                                <div class="md:w-52 max-w-xs md:h-96 w-40 h-80 rounded-3xl overflow-hidden shadow-2xl bg-white transform transition-transform duration-300 hover:scale-105" style="box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);" onclick="tampilkanBerita('<?= $berita['id_berita']; ?>')">
                                     <div class="flex flex-col items-center justify-center">
                                         <img class="w-64 h-36 object-cover transform transition-transform duration-300 hover:scale-95" src="<?= $data['photo']; ?>" alt="<?= $data['judul']; ?>">
                                     </div>
                                     <div class="p-4">
-                                        <p class="text-gray-700 font-poli text-sm mb-2"><?= $data['tanggal']; ?></p>
+                                        <p class="text-gray-700 font-poli text-sm mb-2"><?= date('Y-m-d H:i', strtotime($data['tanggal'])); ?></p>
                                         <h3 class="font-semibold text-base mb-2 w-54 text-blue-900"><?= $data['judul']; ?></h3>
                                         <p class="text-gray-700 w-54 h-16 overflow-hidden text-overflow-ellipsis font-light text-sm"><?= $data['headline']; ?></p>
                                     </div>

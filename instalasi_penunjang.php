@@ -2,7 +2,6 @@
 
 <body>
     <div class="bg-cover sm:w-auto">
-        <br><br>
         <section id="Poli" class="pt-10 pb-16">
             <div class="w-full px-1">
                 <div class="max-w-xl mx-auto text-center mb-16">
