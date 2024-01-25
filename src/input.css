@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: Roboto;
+    src: url("fonts/Roboto-Black.ttf") format("opentype");
+}
+
+.text-container {
+    text-align: center;
+}
+
+#animated-text {
+    font-size: 2em;
+    position: relative;
+    display: inline-block;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease-out;
+}
+
+.rounded-md {
+    transition: transform 0.3s ease-in-out;
+}
+
+.rounded-md:hover {
+    transform: scale(1.05);
+}
+
